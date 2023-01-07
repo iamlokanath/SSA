@@ -1,0 +1,247 @@
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 300vh;
+  background-color: rgb(139, 201, 228);
+  animation: body 1s linear;
+}
+
+@keyframes body {
+  to {
+    background-color: rgb(19, 48, 97);
+  }
+}
+
+.progress {
+  height: 3px;
+  width: 0%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: progress 1s linear;
+}
+
+@keyframes progress {
+  to {
+    background-color: rgb(20, 255, 226);
+    width: 100%;
+  }
+}
+
+:root * {
+  /* Pause the animation */
+  animation-play-state: paused;
+  /* Bind the animation to scroll */
+  animation-delay: calc(var(--scroll) * -1s);
+  /* These last 2 properites clean up overshoot weirdness */
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+
+
+/* profile starts */
+.profile {
+  border-radius: 50%;
+  border: 5px solid #22222273;
+  filter: drop-shadow(5px 5px 30px #22222273);
+  margin: 25px 0 0px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+
+}
+
+.container p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+.container p .span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.container p .span1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* profile ends */
+
+/* social media starts */
+
+.heading {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+
+.button {
+  min-width: 80%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+button a {
+  text-decoration: none;
+  color: black;
+}
+
+button:hover {
+  background-color: rgb(218, 218, 218);
+}
+
+/* social media ends */
+
+/* map starts */
+footer {
+  background-color: rgb(218, 218, 218);
+}
+
+.map {
+  font-family: sans-serif;
+  color: rgb(230, 224, 224);
+}
+
+.map1 {
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+.heading_map {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: sans-serif;
+
+  color: rgb(230, 224, 224);
+}
+
+/* map ends */
+
+/* slideshow */
+* {
+  box-sizing: border-box
+}
+
+/* body {font-family: Verdana, sans-serif; margin:0} */
+.mySlides {
+  display: none
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev{
+  left: 0;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+  .prev,
+  .next,
+  .text {
+    font-size: 11px
+  }
+}
+
+/* slideshow */
